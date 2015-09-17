@@ -1,0 +1,7 @@
+{
+    "name": "Dogbot",
+    "description": "A Groupme Dogbot written in Node.js",
+    "repository": "https://github.com/dhruhin/dogbot",
+    "logo": "http://i.imgur.com/d9uo8ig.jpg",
+    "keywords": ["groupme-bot","news","rss","chooser","node"]
+}

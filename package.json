@@ -1,0 +1,26 @@
+{
+    "name": "Dogbot",
+    "description": "A Groupme Dogbot written in Node.js",
+    "author": "https://github.com/dhruhin",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "director": "",
+        "feed-read": "*"
+    },
+    "engines": {
+        "node": "0.10.x"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dhruhin/dogbot"
+    },
+    "keywords": [
+                 "node",
+                 "heroku",
+                 "express"
+                 ],
+    "license": "MIT"
+}
