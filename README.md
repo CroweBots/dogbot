@@ -24,11 +24,14 @@ Be sure to log into heroku, using your heroku credentials, then click the link b
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-From here, follow the guide from this page to setup the heroku app: https://github.com/groupme/bot-tutorial-nodejs .
+From here, follow the guide from this page to setup the heroku app and bot: https://github.com/groupme/bot-tutorial-nodejs .
 
-![Add Environment Variables](http://i.groupme.com/784x148.png.5790498a7acd46b289aca2be43e9c84e)
+![Add Environment Variables](http://i.imgur.com/f2MZLIq.png)
 
-You'll notice there are more envirnonmental variables to configure here than the previous guide.
+Add the keys exactly as their shown above in the image above and fill them with appropriate values.
+
+The BOT_ID can be found after creating the bot on https://dev.groupme.com/bots .
+(If you haven't done that already, create a bot and set the callback url to the heroku app's url).
 
 The name and alternate_name are what members use to trigger the bot.
 
