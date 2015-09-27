@@ -12,14 +12,6 @@ function(str){
     return this.indexOf(str)!= -1;
 };
 
-aliases = load_aliases();
-
-function load_aliases() {
-    members = 
-
-    // WRITE THIS FUNCTION
-}
-
 function setAlias(nickname, alias) {
     var options, body, botReq;
 
