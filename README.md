@@ -41,6 +41,24 @@ Sometimes, the bot may run into issues when fetching RSS feeds or choosing from 
 
 Go to GroupMe and type one of the names and see how it responds.
 
+# Scheduler
+
+Heroku has plugins that support running commands at a scheduled time.
+
+Search for the plugin in your heroku app dashboard:
+
+![Search Plugins](http://imgur.com/LHR3RPy.png)
+
+Add the plugin and provision it:
+
+![Provision Plugin](http://imgur.com/KhbkEzk.png)   
+
+Finally, create a new job that calls the command worker:
+
+![Create Schedule Job](http://imgur.com/9IL2YZb.png)
+
+You can modify the worker command in the procfile to run any script (it currently runs scheduled_job.js).
+
 # Additional Features
 
 Dogbot comes with both a RSS feed fetcher and a randomized option chooser.
@@ -67,7 +85,7 @@ Within terminal, change directory to the location where you would like the files
 
 And then change directory into the new folder
 
-    $ cd YOUR_APP_NAME_HERE
+    $ cd YOUR_APP_NAME
 
 Change the code, add features, and do whatever you want to your dogbot!
 
