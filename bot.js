@@ -48,7 +48,7 @@ function respond() {
     else if(request.text.contains(name1)||request.text.contains(name2) ) {
         this.res.writeHead(200);
         //run the Rnadom Selector method if there is an or in the text
-        if(request.text.contains("or")){
+        if(request.text.contains(" or ")){
             message = choose(request.text);
         }/*
           Example of custom response based on the user_id who sent the message
