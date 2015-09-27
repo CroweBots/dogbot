@@ -91,7 +91,7 @@ function respond() {
         attachments["type"] = "mentions";
         attachments["user_ids"] = []; 
         for (var alias in aliases) {
-            if request.text.contains(alias) {
+            if (request.text.contains(alias)) {
                 this.res.writeHead(200);
 
                 var indices = {message.indexOf(alias), alias.length};
