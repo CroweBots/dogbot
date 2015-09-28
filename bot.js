@@ -93,8 +93,8 @@ function respond() {
         for (var alias in aliases) {
             if (request.text.contains(alias)) {
                 this.res.writeHead(200);
-
-                var indices = {message.indexOf(alias), alias.length};
+                var index = message.indexOf(alias);
+                var indices = {index, alias.length};
                 attachments["loci"].push(indices);
                 attachments["user_ids"].push(aliases[alias]);
                 message = message.replace(alias, "@" + aliases[alias]);
