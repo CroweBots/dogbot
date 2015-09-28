@@ -27,7 +27,7 @@ function setAlias(nickname, alias) {
     botReq = HTTPS.request(options, function(res) {
         if(res.statusCode == 200) {
             res.on('data', function(data) {
-                var aliases = JSON.parse(fs.readFile("aliases.json"));
+                var aliases = JSON.parse(fs.readFileSync("aliases.json", "utf8"));
                 postMessage(nickname + " is now " + alias + "! ;)");
                 
                 var user_id;
@@ -57,7 +57,8 @@ function respond() {
     var message = "";
     //default responses for the dogbot
     var barks = ["woof", "woof woof", "ruff", "ruff ruff", "arf", "arf arf", "bow wow", "yap", "yap yap", "yip", "yip yip", "wuff", "wuff wuff", "wau", "wau wau", "hev", "hev hev", "hav", "hav hav", "guau-guau", "gua", "gua gua","jau","jau jau", "blaf", "blaf blaf", "woef", "woef woef", "keff", "keff keff", "gav", "gav gav", "tyav", "tyav tyav", "meong", "meong meong", "wan", "wan-wan", "kyan", "kyan-kyan", "bau", "bau bau", "bow", "bow bow", "voff", "voff voff", "blaf", "blaf blaf", "kef", "kef kef", "waf", "waf waf", "woef", "woef woef", "vov", "vuf", "wang", "wang wang", "ham", "ham ham", "waouh", "waouh waouh", "ouah", "ouah ouah", "ouaf", "ouaf ouaf", "vaf", "vaf vaf", "wouf", "wouf wouf", "wouaf", "wouaf wouaf", "jappe", "jappe jappe", "💩", "💩💩", "💩💩💩", "💩💩💩💩", "💩💩💩💩💩", "💩💩💩💩💩💩", "💩💩💩💩💩💩💩", "😀", "😁", "😂", "😃", "😄", "😅", "😆", "😇", "😉", "😊", "☺️", "😋", "😌", "😍", "😎", "😏", "😐", "😑", "😒", "😓", "😔", "😕", "😖", "😗", "😘", "😚", "😛", "😜", "😝", "😞", "😟", "😠", "😡", "😢", "😣", "😤", "😈", "👿", "😥", "😦", "😧", "😨", "😩", "😪", "😫", "😬", "😭", "😮", "😯", "😰", "😱", "😲", "😳", "😴", "😴😴😴", "😴😴", "😵", "😶", "😷", "👣", "👣👣", "👣👣👣", "👣👣👣👣", "👏", "👏👏", "👏👏👏", "👅👅👅👅👅", "👅👅👅👅", "👅👅👅", "👅👅", "👅", "👍", "👎", "👌", "🙏", "🐶", "💦🌱", "💦🌾", "💦🌲", "💦🌳", "💦🌴", "💦🌵", "💦🌵🌵", "💦🌵🌵🌵", "💦🌵🌵🌵🌵", "💦🌵🌵🌵🌵🌵", "🍖", "🍗", "🍚", "🍼", "🎾", "⚽️", "🏀", "🏈", "⚾️", "💤", "📬"];
-    var aliases = JSON.parse(fs.readFileSync("aliases.json", "utf8"));
+    var file_text = fs.readFileSync("aliases.json", "utf8");
+    var aliases = JSON.parse(file_text);
 
     // sets alias
     if (request.text.toLowerCase().contains("set alias")) {
