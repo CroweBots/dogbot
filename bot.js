@@ -1,5 +1,5 @@
 var HTTPS = require('https');
-var FS = require('fs')
+var fs = require('fs')
 //Load all the config variables
 var botID = process.env.BOT_ID;
 var name1 = process.env.name;
