@@ -94,7 +94,7 @@ function respond() {
             if (request.text.contains(alias)) {
                 this.res.writeHead(200);
                 var index = message.indexOf(alias);
-                var indices = {index, alias.length};
+                var indices = {index: alias.length};
                 attachments["loci"].push(indices);
                 attachments["user_ids"].push(aliases[alias]);
                 message = message.replace(alias, "@" + aliases[alias]);
