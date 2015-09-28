@@ -17,8 +17,7 @@ function setAlias(nickname, alias) {
 
     options = {
         hostname: 'api.groupme.com',
-        // path: '/v3/groups/8717323',
-        path: '/v3/groups/16732052',
+        path: '/v3/groups/8717323',
         method: 'GET'
     };
     //if response is long, replace the 1000th character with an elipsis and send it
