@@ -27,7 +27,8 @@ function setAlias(nickname, alias) {
     botReq = HTTPS.request(options, function(res) {
         if(res.statusCode == 200) {
             res.on('data', function(data) {
-                var aliases = JSON.parse(fs.readFileSync("aliases.json", "utf8"));
+                var file_text = fs.readFileSync("aliases.json", "utf8");
+                var aliases = JSON.parse(file_text);
                 postMessage(nickname + " is now " + alias + "! ;)");
                 
                 var user_id;
