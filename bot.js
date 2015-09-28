@@ -79,7 +79,7 @@ function respond() {
     // checks if message contains alias
     var contains_alias = false;
     for (var alias in aliases) {
-        if request.text.contains(alias) {
+        if (request.text.contains(alias)) {
            contains_alias = true;
         }
     }
